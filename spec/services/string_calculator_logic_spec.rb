@@ -41,5 +41,10 @@ RSpec.describe StringCalculatorLogic do
        expect(result).to eq(20)
      end
 
+     it 'returns invalid for an empty string' do
+       result = StringCalculatorLogic.add('1,\n')
+       expect(result).to eq('invalid')
+     end
+
    end
 end

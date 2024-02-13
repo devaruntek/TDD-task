@@ -10,6 +10,8 @@ class StringCalculatorLogic
 
     numbers = numbers_string.gsub('\n', ",").split(',').map(&:to_i) if numbers_string.include?('\n')
 
+    return "invalid" if numbers_string.split(',').include?('\n')
+
     numbers.sum
   end
 end
