@@ -46,5 +46,10 @@ RSpec.describe StringCalculatorLogic do
        expect(result).to eq('invalid')
      end
 
+     it 'returns sum of number for string' do
+       result = StringCalculatorLogic.add('//;\n1;2;4')
+       expect(result).to eq(7)
+     end
+
    end
 end
