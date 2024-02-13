@@ -66,5 +66,10 @@ RSpec.describe StringCalculatorLogic do
        expect(result).to eq("negative numbers not allowed -2, -3")
      end
 
+     it 'returns sum when string contain multiple delimiters' do
+       result = StringCalculatorLogic.add('//[*][%]\n1*2%3')
+       expect(result).to eq(6)
+     end
+
    end
 end
