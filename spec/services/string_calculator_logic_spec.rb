@@ -51,5 +51,15 @@ RSpec.describe StringCalculatorLogic do
        expect(result).to eq(7)
      end
 
+     it 'returns sum of and not include number >1000' do
+       result = StringCalculatorLogic.add('2,1001')
+       expect(result).to eq(2)
+     end
+
+     it 'returns sum for string contain *' do
+       result = StringCalculatorLogic.add('/[***]\n1***2***3')
+       expect(result).to eq(6)
+     end
+
    end
 end
