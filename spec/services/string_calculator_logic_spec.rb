@@ -36,5 +36,10 @@ RSpec.describe StringCalculatorLogic do
         expect(result).to eq("negative numbers not allowed -2, -4, -6")
      end
 
+     it 'returns 20 for an \n string' do
+       result = StringCalculatorLogic.add('2\n4,6\n8')
+       expect(result).to eq(20)
+     end
+
    end
 end

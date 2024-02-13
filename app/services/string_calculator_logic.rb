@@ -7,7 +7,9 @@ class StringCalculatorLogic
       num = numbers_string.split(',').map(&:to_i).select { |num| num < 0 }.join(", ")
       return "negative numbers not allowed #{num}"
     end
-    
+
+    numbers = numbers_string.gsub('\n', ",").split(',').map(&:to_i) if numbers_string.include?('\n')
+
     numbers.sum
   end
 end
